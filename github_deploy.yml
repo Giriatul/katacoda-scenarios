@@ -1,0 +1,10 @@
+stages:
+    - deploy
+    - deploydevelop
+deploy:
+    stage: deploy
+    rules:
+        - if: $CI_COMMIT_BRANCH == 'main'
+    script:
+        - sh run python
+       
